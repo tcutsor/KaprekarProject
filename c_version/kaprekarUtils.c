@@ -1,4 +1,5 @@
-#include<math.h>
+#include <math.h>
+#include <stdbool.h>
 
 #include "kaprekarUtils.h"
 
@@ -29,15 +30,15 @@ int isKaprekar(int n) {
   }
 
   int i;
-  long square = n * n;
-  int numDigits = (int) log10(n) + 1;
+  long square = (long) n * n;
+  int numDigits = (int) log10(square) + 1;
   long modulus = 0;
   long first, second;
   for(i = 1; i <= numDigits; i++) {
-    modulous = 10;
+    modulus = 10;
     first = square / modulus;
     second = square % modulus;
-    if(second > 0 && first + second == n) {
+    if(second > 0 && first + second == n && second > 1 || n == 1) {
       return 1;
     }
   }
