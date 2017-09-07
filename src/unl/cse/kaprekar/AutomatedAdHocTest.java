@@ -42,6 +42,8 @@ public class AutomatedAdHocTest {
 	}
 	
 	public static void main(String args[]) {
-		testAll();
+	testAll();
+		//boolean result = KaprekarUtils.isKaprekar(1);
+		//System.out.println(result);
 	}
 }
